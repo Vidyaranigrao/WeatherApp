@@ -13,9 +13,20 @@ struct CityDetail : Decodable {
     var country: String
     var id: Int
     var coord:Coordinate
+    
+    init(name: String, country: String, id: Int, coord: Coordinate) {
+        self.name = name
+        self.country = country
+        self.id = id
+        self.coord = coord
+    }
 }
 
 struct Coordinate: Decodable {
     var lon: Double
     var lat: Double
+    init(lon: Double, lat: Double) {
+        self.lon = lon
+        self.lat = lat
+    }
 }

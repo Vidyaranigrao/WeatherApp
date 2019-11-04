@@ -15,8 +15,16 @@ struct WeatherList: Decodable {
 struct WeatherModel : Decodable {
     var main: Temperature
     var name: String
+    var weather: [Weather]
 }
 
 struct Temperature: Decodable {
     var temp: Double
+    var temp_min: Double
+    var temp_max: Double
+    var humidity: Double
+}
+
+struct Weather: Decodable {
+    var description: String
 }
